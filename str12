@@ -1,0 +1,25 @@
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func main() {
+	var input string
+	fmt.Print("Digite uma string: ")
+	fmt.Scanln(&input)
+
+	// Remove os espaços em branco e converte tudo para letras minúsculas
+	input = strings.ToLower(strings.ReplaceAll(input, " ", ""))
+
+	// Inverte a string
+	reversed := reverseString(input)
+
+	// Verifica se a string original e a invertida são iguais
+	if input == reversed {
+		fmt.Println("A string digitada é um palíndromo.")
+	} else {
+		fmt.Println("A string digitada não é um palíndromo.")
+	}
+}

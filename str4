@@ -1,0 +1,20 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+
+	var str, str2 string
+	fmt.Print("Digite uma string: ")
+	fmt.Scanln(&str)
+	fmt.Print("Digite o caractere a ser substituído: ")
+	fmt.Scanln(&str2)
+	if str == str2 {
+		fmt.Println("Elas são iguais", str, "e", str2)
+	} else {
+		fmt.Println("São duas palavaras distintas")
+
+	}
+}

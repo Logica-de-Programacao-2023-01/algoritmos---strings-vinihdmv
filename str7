@@ -1,0 +1,26 @@
+package main
+
+import (
+	"fmt"
+	"unicode"
+)
+
+func main() {
+
+	var str string
+	fmt.Print("Digite uma string: ")
+	fmt.Scanln(&str)
+
+	TemNum := false
+	for _, char := range str {
+		if unicode.IsDigit(char) {
+			TemNum = true
+			break
+		}
+	}
+	if TemNum {
+		fmt.Println("A string contém pelo menos um número.")
+	} else {
+		fmt.Println("A string não contém nenhum número.")
+	}
+}

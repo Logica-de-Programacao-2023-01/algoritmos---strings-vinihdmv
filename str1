@@ -1,0 +1,15 @@
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func main() {
+	var palavra string
+	fmt.Print("Escreva uma palavra", palavra)
+	fmt.Scan(&palavra)
+
+	strnospace := strings.ReplaceAll(palavra, "", "")
+	fmt.Println("Strings sem espaços", strnospace)
+}

@@ -1,0 +1,22 @@
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func main() {
+	var input string
+	fmt.Print("Digite uma string: ")
+	fmt.Scanln(&input)
+
+	input = strings.TrimSpace(input)
+
+
+	words := strings.Split(input, " ")
+
+
+	wordCount := len(words)
+
+	fmt.Printf("A string digitada contém %d palavras.\n", wordCount)
+}

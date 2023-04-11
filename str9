@@ -1,0 +1,21 @@
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func main() {
+	var strin string
+	var let string
+	var letin string
+	fmt.Print("Escreva uma palavra", strin)
+	fmt.Scan(&strin)
+	fmt.Print("Escreva uma letra que vc deseja retirar", let)
+	fmt.Scan(&let)
+	fmt.Print("Escreva uma letra que vc deseja colocar", letin)
+	fmt.Scan(&letin)
+
+	PalvaraFinal := strings.ReplaceAll(strin, let, letin)
+	fmt.Println(PalvaraFinal)
+}

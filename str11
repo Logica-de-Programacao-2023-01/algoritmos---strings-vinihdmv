@@ -1,0 +1,20 @@
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func main() {
+
+	var str string
+	fmt.Println("Digite uma string:")
+	fmt.Scanln(&str)
+
+	vowels := "aeiouAEIOU"
+	for _, v := range vowels {
+		str = strings.ReplaceAll(str, string(v), "")
+	}
+
+	fmt.Println("String sem vogais:", str)
+}

@@ -1,0 +1,26 @@
+package main
+
+import (
+	"fmt"
+	"sort"
+	"strings"
+)
+
+func main() {
+
+	var palavra1, palavra2 string
+	fmt.Println("Digite a primeira string:")
+	fmt.Scanln(&palavra1)
+	fmt.Println("Digite a segunda string:")
+	fmt.Scanln(&palavra2)
+
+	strDividida := strings.Split(palavra1, "")
+	strDividida2 := strings.Split(palavra2, "")
+	sort.Strings(strDividida)
+	sort.Strings(strDividida2)
+
+	if strings.Join(strDividida, "") == strings.Join(strDividida2, "") {
+		fmt.Println("As strings são anagramas.")
+	} else {
+		fmt.Println("As strings não são anagramas.")
+	}
